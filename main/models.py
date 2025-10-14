@@ -76,3 +76,13 @@ class Chef(models.Model):
     is_visible = models.BooleanField(default=True)
     def __str__(self):
         return self.name
+
+class Event(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(max_length=500)
+    photo = models.ImageField(upload_to="events/")
+    is_visible = models.BooleanField(default=True)
+    price = models.DecimalField(decimal_places=2, max_digits=10)
+
+    def __str__(self):
+        return self.name

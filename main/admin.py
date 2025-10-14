@@ -1,8 +1,10 @@
 from django.contrib import admin
-from .models import DishCategory,Dish,Gallary,Reservation,Chef
+from .models import DishCategory,Dish,Gallary,Reservation,Chef,Event
 admin.site.register(Reservation)
 admin.site.register(Gallary)
 admin.site.register(Chef)
+admin.site.register(Event)
+
 
 @admin.register(DishCategory)
 class DishCategoryAdmin(admin.ModelAdmin):
