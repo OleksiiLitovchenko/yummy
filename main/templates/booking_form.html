@@ -1,4 +1,5 @@
- <section id="book-a-table" class="book-a-table">
+{%load static%}
+<section id="book-a-table" class="book-a-table">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -8,7 +9,7 @@
 
         <div class="row g-0">
 
-          <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);" data-aos="zoom-out" data-aos-delay="200"></div>
+          <div class="col-lg-4 reservation-img" style="background-image: url('{% static '../../static/assets/img/reservation.jpg' %}')";" data-aos="zoom-out" data-aos-delay="200"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
             <form action="{% url 'main:home' %}" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
